@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ER Diagram - HTML Representation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+    .schema {
+      background: #d6eaff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+    }
+    .schema h3 {
+      margin: 0;
+      text-align: center;
+      color: #003366;
+    }
+    .field {
+      background: #fbdede;
+      margin: 5px 0;
+      padding: 6px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .relationship {
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #339933;
+    }
+  </style>
+</head>
+<body>
+  <h1>ER Diagram Representation</h1>
+  <div class="container">
+    <div class="schema">
+      <h3>User Schema</h3>
+      <div class="field">user_id</div>
+      <div class="field">name</div>
+      <div class="field">ph no</div>
+      <div class="field">user type</div>
+      <div class="field">email</div>
+      <div class="field">password</div>
+    </div>
+
+    <div class="schema">
+      <h3>Complaint Schema</h3>
+      <div class="field">complaint_id</div>
+      <div class="field">user_id</div>
+      <div class="field">name</div>
+      <div class="field">address</div>
+      <div class="field">city</div>
+      <div class="field">state</div>
+      <div class="field">status</div>
+      <div class="field">comment</div>
+      <div class="field">pincode</div>
+    </div>
+
+    <div class="schema">
+      <h3>Assigned Schema</h3>
+      <div class="field">_id</div>
+      <div class="field">user_id</div>
+      <div class="field">complaint_id</div>
+      <div class="field">agent</div>
+      <div class="field">status</div>
+    </div>
+
+    <div class="schema">
+      <h3>Message</h3>
+      <div class="field">_id</div>
+      <div class="field">name</div>
+      <div class="field">message</div>
+      <div class="field">complaint_id</div>
+    </div>
+  </div>
+
+  <div class="relationship">Relationship: User Has Complaint</div>
+</body>
+</html>
